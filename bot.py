@@ -15,6 +15,6 @@ api = tweepy.API(auth, wait_on_rate_limit=True,
 counter = 0
 while True:
     counter+=1
-    api.update_with_media(("./images/download (" + str(random.randint(1, 26)) + ").jfif"), status=("@realDonaldTrump this is your hourly reminder that you are Orange. #" + str(counter)))
+    api.update_with_media(("./Images/download (" + str(random.randint(1, 26)) + ").jfif"), status=("@realDonaldTrump this is your hourly reminder that you are Orange. #" + str(counter)))
     print(counter)
     time.sleep(3600)
