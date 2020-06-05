@@ -11,6 +11,9 @@ api = tweepy.API(auth)
 
 api = tweepy.API(auth, wait_on_rate_limit=True,
     wait_on_rate_limit_notify=True)
+    counter = 0
 while True:
-    api.update_status("@realDonaldTrump this is your hourly reminder that you are Orange.")
+    counter++
+    api.update_with_media(("download (" + randint(1, 26) + ").jfif"), status=("@realDonaldTrump this is your hourly reminder that you are Orange. #" + counter))
+    print(counter)
     time.sleep(3600)
